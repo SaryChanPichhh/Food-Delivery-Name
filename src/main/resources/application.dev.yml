@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://dpg-d3t4fsmmcj7s73ffpv70-a.singapore-postgres.render.com:5432/delivery_app_0jr7
+    username: delivery_app_0jr7_use
+    password: qTfR4dpd2Ac9kIuVP58DQLjpgtkt1ymS
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
