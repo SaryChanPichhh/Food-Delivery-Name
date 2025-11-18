@@ -1,4 +1,4 @@
-package com.group_one.food_delivery_app.src.entity;
+package com.group_one.food_delivery_app.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
