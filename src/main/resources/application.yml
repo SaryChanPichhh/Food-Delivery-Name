@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://dpg-d3t4fsmmcj7s73ffpv70-a.singapore-postgres.render.com:5432/delivery_app_0jr7
-    username: delivery_app_0jr7_user
-    password: qTfR4dpd2Ac9kIuVP58DQLjpgtkt1ymS
+    url: jdbc:postgresql://dpg-d4gttm2li9vc73ds1n50-a.singapore-postgres.render.com:5432/avengers_my4e
+    username: avengers_my4e_user
+    password: tpsJLgQElGednUELLbvxOWILg9E1RxRm
     driver-class-name: org.postgresql.Driver
 
   jpa:

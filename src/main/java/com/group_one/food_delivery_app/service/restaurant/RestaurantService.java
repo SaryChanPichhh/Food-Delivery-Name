@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -36,8 +37,13 @@ public class RestaurantService implements IRestaurantService {
             return response;
             }
     }
-
+    @Override
     public Boolean isExistsName(String name) {
-        return null;
+        return restaurantRepository.isExistsName(name);
+    }
+
+    @Override
+    public List<RestaurantModel> GetAll() {
+        return restaurantRepository.findAll();
     }
 }

@@ -41,7 +41,7 @@ public class JwtService {
                 .getBody();
 
         ClaimDto dto = new ClaimDto();
-        dto.setId((Integer) claims.get("userId"));
+        dto.setId(((Number) claims.get("userId")).longValue());
         dto.setUserName((String) claims.get("userName"));
         dto.setUserType(Enum.valueOf(UserType.class, (String) claims.get("userType")));
         dto.setZone((String) claims.get("zoneId"));

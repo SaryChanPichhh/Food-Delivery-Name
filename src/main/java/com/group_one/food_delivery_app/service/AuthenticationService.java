@@ -5,6 +5,7 @@ import com.group_one.food_delivery_app.dto.RegisterDto;
 import com.group_one.food_delivery_app.dto.UserDto;
 import com.group_one.food_delivery_app.entity.UserModel;
 import com.group_one.food_delivery_app.infrastructure.IAuthenticationService;
+import com.group_one.food_delivery_app.infrastructure.IRestaurantService;
 import com.group_one.food_delivery_app.repository.AuthenticationRepository;
 import com.group_one.food_delivery_app.security.JwtService;
 import org.antlr.v4.runtime.atn.SemanticContext;

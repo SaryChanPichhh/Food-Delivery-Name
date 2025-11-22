@@ -9,7 +9,10 @@ import org.springframework.stereotype.Repository;
 import org.springframework.validation.annotation.Validated;
 
 @Repository
-public interface RestaurantRepository extends JpaRepository<RestaurantModel,Long> {
+public interface RestaurantRepository extends JpaRepository<RestaurantModel,Integer> {
     @Query(value = "SELECT CAST(CASE WHEN COUNT(*) > 0 THEN 1 ELSE 0 END  AS Bit) IsExists FROM RESTAURANT WHERE  UPPER(NAME)=UPPER(:NAME)",nativeQuery = true)
     Boolean isExistsName(@Param("NAME") String name);
+
+
+
 }

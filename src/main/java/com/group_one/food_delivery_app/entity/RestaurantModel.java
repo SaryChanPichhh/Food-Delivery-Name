@@ -11,7 +11,7 @@ import java.time.LocalDate;
 public class RestaurantModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private String name;
     private String description;
     private String address;
@@ -21,8 +21,8 @@ public class RestaurantModel {
     private String zone;
     private String branch;
     private String latLng;
-    private LocalDate createdat;
-    private LocalDate updatedat;
+    private LocalDate createdAt;
+    private LocalDate updatedAt;
     @ManyToOne
     @JoinColumn(name = "userid")
     private UserModel user;

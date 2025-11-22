@@ -6,10 +6,9 @@ import lombok.Data;
 @Data
 
 public class ClaimDto {
-    private int id;
+    private Long id;
     private String userName;
     private UserType userType;
     private String zone;
     private String branchCode;
-
 }

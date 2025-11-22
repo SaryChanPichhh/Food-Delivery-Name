@@ -3,6 +3,7 @@ package com.group_one.food_delivery_app.controller;
 import com.group_one.food_delivery_app.dto.RegisterDto;
 import com.group_one.food_delivery_app.dto.UserDto;
 import com.group_one.food_delivery_app.infrastructure.IAuthenticationService;
+import com.group_one.food_delivery_app.infrastructure.IRestaurantService;
 import com.group_one.food_delivery_app.service.AuthenticationService;
 import com.group_one.food_delivery_app.utils.ApiResponse.APIResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,12 +21,15 @@ import java.time.LocalDateTime;
 public class AuthenticationController {
     @Autowired
     private IAuthenticationService authenticationService;
+    @Autowired
+    private IRestaurantService restaurantService;
 
     @PostMapping("/login")
     public APIResponse<String> login(@RequestBody UserDto userDto) {
         var apiResponse =new APIResponse();
         apiResponse.setTimestamp(LocalDateTime.now());
         try {
+
             String token = authenticationService.LoginAsync(userDto);
             apiResponse.setData(token);
             apiResponse.setStatusCode(200);
